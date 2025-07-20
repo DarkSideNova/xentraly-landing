@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Zen+Dots&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #211E3B;
+  --color-primary-dark: #242424;
+  --color-secondary: #747474;
+  --color-secondary-dark: #747474;
+  --color-third: #38B7D2;
+  --color-third-dark: #38B7D2;
+  --color-dark: #020B1C;
+  --color-title: #020B1C;
+  --color-paragraph: #7F7F7F;
+  --color-background: #E9F6FF;
+}
+
+:root {
+  --primary: #242424;
+  --primary-dark: #242424;
+  --secondary: #747474;
+}
+
+* {
+  margin: 0;
+  font-family: "Poppins", Menlo,
+    "Liberation Mono", "Arial";
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
