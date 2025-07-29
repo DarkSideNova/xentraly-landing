@@ -42,7 +42,7 @@ const Card:React.FC<cardTypeProps> = ({data}) => {
                 <div className="w-full grid grid-cols-3 relative gap-2">
                     {data.platformImages.map((elem, i) => 
                         <span className="bg-secondary h-[30vh] relative overflow-hidden rounded-lg" key={i}>
-                            <img src={elem} className="size-full object-cover object-center relative" />
+                            <img src={"/images/products/" + elem} className="size-full object-cover object-center relative" />
                         </span>
                     )}
                 </div>
@@ -55,7 +55,7 @@ const Card:React.FC<cardTypeProps> = ({data}) => {
             <div className="w-[35%] flex-none h-full flex flex-col justify-start items-start relative gap-5">
                 <p className="text-[30px] font-bold text-white">Salud y Bienestar</p>
                 <span className="w-full h-[35vh] relative overflow-hidden rounded-[12px] flex justify-center items-center">
-                    <img src={data.mainImage} className="size-full object-cover object-center relative bg-secondary" alt="Imagen producto xentraly"/>
+                    <img src={"/images/products/" + data.mainImage} className="size-full object-cover object-center relative bg-secondary" alt="Imagen producto xentraly"/>
                 </span>
             </div>
             <div className="w-full flex flex-col justify-start items-start relative gap-4">

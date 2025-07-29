@@ -1,16 +1,25 @@
 import { cn } from "@/app/utils/cn"
 import moment from "moment"
 import { forwardRef } from "react"
-import { FaFacebookF } from "react-icons/fa"
+/* import { FaFacebookF } from "react-icons/fa" */
 import { LiaLinkedinIn } from "react-icons/lia"
 import { RiInstagramLine } from "react-icons/ri"
 import listOfLinks from "./list"
 import { FiGlobe, FiMail, FiPhone } from "react-icons/fi"
 import { Button } from "../../ui/button"
 import { PiUserSquare } from "react-icons/pi"
+import { FooterMobile } from "./mobile"
+import useResponsive from "@/app/utils/hooks/useResponsive"
 
 const Footer = forwardRef<HTMLDivElement>(
     ({ ...props }, ref) => {
+        const isTabletOrMobile = useResponsive('(max-width: 1224px)')
+
+        if (isTabletOrMobile) {
+            return(
+                <FooterMobile/>
+            )
+        }
 
         return (
             <div
@@ -81,13 +90,13 @@ const Footer = forwardRef<HTMLDivElement>(
                         <p className="text-[16px] text-[#F2F2F7] font-normal">© {moment().year()} Xentraly. Todos los derechos reservados.</p>
                     </div>
                     <div className="flex justify-end items-center relative gap-4">
-                        <a  className="size-[27px] flex-none p-1 rounded-full flex justify-center items-center relative bg-third">
+                        {/* <a href="https://www.linkedin.com/company/xentraly/" className="size-[27px] flex-none p-1 rounded-full flex justify-center items-center relative bg-third">
                             <FaFacebookF/>
-                        </a>
-                        <a  className="size-[27px] flex-none p-1 rounded-full flex justify-center items-center relative bg-third">
+                        </a> */}
+                        <a href="https://www.linkedin.com/company/xentraly/" target="_blank" className="size-[27px] flex-none p-1 rounded-full flex justify-center items-center relative bg-third">
                             <LiaLinkedinIn/>
                         </a>
-                        <a  className="size-[27px] flex-none p-1 rounded-full flex justify-center items-center relative bg-third">
+                        <a href="https://www.instagram.com/xentraly/" target="_blank" className="size-[27px] flex-none p-1 rounded-full flex justify-center items-center relative bg-third">
                             <RiInstagramLine/>
                         </a>
                     </div>

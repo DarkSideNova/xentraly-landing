@@ -1,6 +1,18 @@
+import useResponsive from "@/app/utils/hooks/useResponsive"
 import Grid from "./grid"
+import EcosystemMobile from "./mobile"
 
 const Ecosystem = () => {
+
+    const isTabletOrMobile = useResponsive('(max-width: 1224px)')
+
+    if(isTabletOrMobile){
+        return(
+            <EcosystemMobile/>
+        )
+    }
+
+
     return(
         <div className="w-full flex flex-col justify-center items-center relative px-[115px] gap-6 ">
             <div className="w-full flex flex-col justify-center items-center relative gap-2">

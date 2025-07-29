@@ -2,9 +2,18 @@ import { cn } from "@/app/utils/cn"
 import { forwardRef } from "react"
 import { FiGlobe } from "react-icons/fi"
 import Menu from "./menu"
+import useResponsive from "@/app/utils/hooks/useResponsive"
+import NavbarMobile from "./mobile"
 
 const Navbar = forwardRef<HTMLDivElement>(
     ({ ...props }, ref) => {
+        const isTabletOrMobile = useResponsive('(max-width: 1224px)')
+
+        if (isTabletOrMobile) {
+            return (
+                <NavbarMobile />
+            )
+        }
 
         return (
             <div
@@ -17,7 +26,7 @@ const Navbar = forwardRef<HTMLDivElement>(
                 <div className="w-full flex justify-end items-center relative bg-[#D9D9D9] px-[115px] py-[5px]">
                     <div className="w-fit flex justify-between items-center relative gap-2">
                         <span className="text-primary relative">
-                            <FiGlobe size={16}/>
+                            <FiGlobe size={16} />
                         </span>
                         <p className="text-[16px] font-normal text-primary">ES</p>
                         <p className="text-[16px] font-normal text-primary">EN</p>
@@ -27,7 +36,7 @@ const Navbar = forwardRef<HTMLDivElement>(
                     <a href="/" className="h-full w-[11vw] relative visible">
                         <img src={"/images/logo.png"} alt="logo" className="h-[100%] w-[100%] object-contain" />
                     </a>
-                    <Menu/>
+                    <Menu />
                 </div>
             </div>
 

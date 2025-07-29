@@ -4,7 +4,7 @@ import Ecosystem from "./components/ecosystem"
 import Automatization from "./components/automatization"
 import BusinessModels from "./components/business-models"
 import Header from "./components/header"
-import Brands from "./components/brands/brands"
+import Brands from "./components/brands"
 
 const HomeMain = () => {
 
@@ -18,8 +18,10 @@ const HomeMain = () => {
             <Header />
             <Automatization />
             <Ecosystem />
-            <BusinessModels />
-            <Brands />
+            <div className="w-full flex flex-col justify-center items-center relative">
+                <BusinessModels />
+                <Brands />
+            </div>
         </div>
     )
 }

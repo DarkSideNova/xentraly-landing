@@ -2,10 +2,17 @@ import { twMerge } from "tailwind-merge"
 import useResponsive from "@/app/utils/hooks/useResponsive"
 import { Button } from "../core/ui/button"
 import { PiUserSquare } from "react-icons/pi"
+import AboutUsMobile from "./mobile"
 
 const AboutUsMain = () => {
 
     const isTabletOrMobile = useResponsive('(max-width: 1224px)')
+
+    if(isTabletOrMobile){
+        return(
+            <AboutUsMobile/>
+        )
+    }
 
     return (
         <div className={twMerge([

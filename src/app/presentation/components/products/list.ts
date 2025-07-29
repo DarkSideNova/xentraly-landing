@@ -3,7 +3,7 @@ import { ICardProduct } from "./components/card"
 const listOfProducts:ICardProduct[] = [
     {
         title: "Salud y Bienestar",
-        mainImage: "",
+        mainImage: "pr1-1.png",
         description: "Conecta tu red de especialistas y facilita el acceso a servicios y productos. Fideliza a tus pacientes acompañándolos antes, durante y después de la atención.",
         items: [
             "Directorio / Marketplace de especialistas, servicios y productos",
@@ -13,14 +13,14 @@ const listOfProducts:ICardProduct[] = [
             "Asistente IA de atención y triaje.",
         ],
         platformImages: [
-            "",
-            "",
-            "",
+            "pr1-2.png",
+            "pr1-3.png",
+            "pr1-4.png",
         ],
     },
     {
         title: "Mascotas",
-        mainImage: "",
+        mainImage: "pr2-1.png",
         description: "Conecta a todos los proveedores y actores del ecosistema de mascotas en una misma red y maximiza el valor a los dueños de mascotas.",
         items: [
             "Marketplace de proveedores de servicios, productos, sitios pet friendly, Comunidad, etc.",
@@ -30,14 +30,14 @@ const listOfProducts:ICardProduct[] = [
             "Asistente IA atención.",
         ],
         platformImages: [
-            "",
-            "",
-            "",
+            "pr2-2.png",
+            "pr2-3.png",
+            "pr2-4.png",
         ],
     },
     {
         title: "Seguros",
-        mainImage: "",
+        mainImage: "pr3-1.png",
         description: "Facilita el acceso de tus asegurados a los servicios conectados a sus planes y a la red de proveedores.",
         items: [
             "Portal Asistencia de servicios de salud, mascotas, hogar, entre otros.",
@@ -47,14 +47,14 @@ const listOfProducts:ICardProduct[] = [
             "Asistente IA de atención y triaje.",
         ],
         platformImages: [
-            "",
-            "",
-            "",
+            "pr3-2.png",
+            "pr3-3.png",
+            "pr3-4.png",
         ],
     },
     {
         title: "Servicios Hogares y Empresas",
-        mainImage: "",
+        mainImage: "pr4-1.png",
         description: "Crea una red de proveedores de servicios para el hogar y para las empresas en donde garantices calidad, seguridad y muchos servicios de valor para los clientes y proveedores.",
         items: [
             "Marketplace de proveedores de servicios, productos, emergencias, etc.",
@@ -64,9 +64,9 @@ const listOfProducts:ICardProduct[] = [
             "Asistente IA atención.",
         ],
         platformImages: [
-            "",
-            "",
-            "",
+            "pr4-2.png",
+            "pr4-3.png",
+            "pr4-4.png",
         ],
     },
 ]

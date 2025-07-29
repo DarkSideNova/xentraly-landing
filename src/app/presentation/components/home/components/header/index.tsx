@@ -1,7 +1,18 @@
 import { PiUserRectangle } from "react-icons/pi"
 import { Button } from "../../../core/ui/button"
+import useResponsive from "@/app/utils/hooks/useResponsive"
+import HeaderMobile from "./mobile"
 
 const Header = () => {
+
+    const isTabletOrMobile = useResponsive('(max-width: 1224px)')
+
+    if(isTabletOrMobile){
+        return(
+            <HeaderMobile/>
+        )
+    }
+
     return(
         <div className="w-full h-[85vh] flex flex-col justify-center items-center relative">
             <div className="w-full h-full flex flex-col justify-between items-center absolute top-0 left-0 px-[115px] py-[70px] bg-primary/70">

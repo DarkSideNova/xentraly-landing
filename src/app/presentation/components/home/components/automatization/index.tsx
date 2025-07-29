@@ -1,6 +1,17 @@
+import useResponsive from "@/app/utils/hooks/useResponsive"
 import Grid from "./grid"
+import AutomatizationMobile from "./mobile"
 
 const Automatization = () => {
+
+    const isTabletOrMobile = useResponsive('(max-width: 1224px)')
+
+    if(isTabletOrMobile){
+        return(
+            <AutomatizationMobile/>
+        )
+    }
+
     return(
         <div
             className="w-full flex flex-col justify-center items-center relative px-[115px] gap-6 bg-gradient-to-b from-white to-[#E1E1E1] py-20"
