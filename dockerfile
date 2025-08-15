@@ -26,6 +26,4 @@ EXPOSE 3000
 
 COPY --from=builder /app/dist /app/dist
 
-RUN npm install serve --save-dev
-
 CMD ["npx", "serve", "-s", "dist"]
