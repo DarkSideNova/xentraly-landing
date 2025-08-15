@@ -12,6 +12,12 @@ export default defineConfig({
     },
   },
   server: {
+    allowedHosts: [
+      "localhost", 
+      "127.0.0.1", 
+      "xentralyweb-hmfmataahxhvbhhs.eastus2-01.azurewebsites.net",
+      "xentraly.com"
+    ],
     port: 3000,
     strictPort: true,
     host: true,
