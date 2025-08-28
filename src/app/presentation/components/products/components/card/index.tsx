@@ -53,7 +53,7 @@ const Card:React.FC<cardTypeProps> = ({data}) => {
     return(
         <div className="w-full flex bg-[#211E3B] relative justify-between items-start rounded-[20px] p-5 gap-10">
             <div className="w-[35%] flex-none h-full flex flex-col justify-start items-start relative gap-5">
-                <p className="text-[30px] font-bold text-white">Salud y Bienestar</p>
+                <p className="text-[30px] font-bold text-white">{data.title}</p>
                 <span className="w-full h-[35vh] relative overflow-hidden rounded-[12px] flex justify-center items-center">
                     <img src={"/images/products/" + data.mainImage} className="size-full object-cover object-center relative bg-secondary" alt="Imagen producto xentraly"/>
                 </span>
